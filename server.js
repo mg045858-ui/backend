@@ -15,12 +15,19 @@ const UPI_ID     = process.env.UPI_ID  || "tradex@upi";
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:3000", "http://127.0.0.1:5173"],
+  origin: [
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "http://127.0.0.1:5173",
+    "https://protrader-fx.netlify.app"
+  ],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 app.use(express.json());
+
 
 // ─── Database ─────────────────────────────────────────────────────────────────
 const db = new Database(path.join(__dirname, "tradex.db"));
