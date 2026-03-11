@@ -19,7 +19,7 @@ app.use(cors({
     "http://localhost:5173",
     "http://localhost:3000",
     "http://127.0.0.1:5173",
-    "http://protraderfx.netlify.app/"
+    "https://protraderfx.netlify.app/"
   ],
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
